@@ -26,4 +26,4 @@
 ## 作业
 
 - [ ] [Homework #1](https://github.com/Chaphlagical/Course/tree/main/CAGD/Homework/hw1)
-- [ ] Homework #2
+- [ ] [Homework #2]((https://github.com/Chaphlagical/Course/tree/main/CAGD/Homework/hw2))
