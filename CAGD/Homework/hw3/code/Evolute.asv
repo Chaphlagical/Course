@@ -1,0 +1,33 @@
+function [X,Y] = Evolute(a,b)
+%EVOLUTE 此处显示有关此函数的摘要
+%   此处显示详细说明
+t=0:0.01:2*pi;
+
+c1x=-a*sin(t);
+c1y=b*cos(t);
+c1=sqrt(c1x.^2+c1y.^2);
+e1x=c1x/c1;
+e1y=c1y/c1;
+
+c2x=-a*cos(t);
+c2y=-b*sin(t);
+
+b2x=c2x-(c2x.*e1x+c2y.*e1y).*e1x;
+b2y=c2y-(c2x.*e1x+c2y.*e1y).*e1y;
+b2=sqrt(b2x.^2+b2y.^2);
+
+e2x=b2x./b2;
+e2y=b2y./b2;
+
+k=(c1.^3)/(a*b);
+
+X=a*cos(t)+k.*e2x;
+Y=b*sin(t)+k.*e2y;
+
+%plot(a*cos(t),b*sin(t));
+%hold on;
+%plot(X,Y);
+plot()
+
+end
+
