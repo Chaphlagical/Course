@@ -2,10 +2,8 @@ function [dx,dy] = DeBoorPoints(feature,X,Y)
 %DEBOORPOINTS 此处显示有关此函数的摘要
 %   此处显示详细说明
 %k0 k1 k2 ... kn
-feature
 n=sum(feature)-1;
 t=Knot(feature);
-t
 s=t(4:length(t)-3);
 A=zeros(n+3,n+3);
 kx=zeros(n+3,1);ky=zeros(n+3,1);
@@ -92,7 +90,6 @@ elseif feature(length(feature))==3
    kx(n+1)=X(length(X));ky(n+1)=Y(length(Y));
    kx(n+3)=X(length(X));ky(n+3)=Y(length(Y));
 end
-A
 dx=A\kx;
 dy=A\ky;
 end
